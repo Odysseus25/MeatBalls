@@ -30,7 +30,7 @@ public class SpawerController : MonoBehaviour {
 
     void Spawn(GameObject ingredientsPrefab)
     {
-        GameObject ingredient = Instantiate(ingredientsPrefab, transform.position, Quaternion.identity) as GameObject;
+        GameObject ingredient = Instantiate(ingredientsPrefab, transform.position, transform.rotation * Quaternion.Euler(-90, 0, 0)) as GameObject;
         ingredient.transform.parent = ingredientContainer.transform;
     }
 

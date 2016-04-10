@@ -28,7 +28,7 @@ public class Ingredients : MonoBehaviour
 
     void RotateIngredient()
     {
-        transform.Rotate(new Vector3(0, rotationSpeed, 0) * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider col){
