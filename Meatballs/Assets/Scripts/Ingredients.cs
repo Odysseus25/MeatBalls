@@ -7,6 +7,7 @@ public class Ingredients : MonoBehaviour
     public int moveSpeed = 0;
     public float rotationSpeed = 0;
     public float timeToSpawn = 0;
+    public int type = 0;
 
     // Use this for initialization
     void Start()

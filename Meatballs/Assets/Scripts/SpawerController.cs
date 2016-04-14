@@ -4,6 +4,7 @@ using System.Collections;
 public class SpawerController : MonoBehaviour {
 
     public GameObject[] ingredientsPrefab;
+
     private GameObject ingredientContainer;
 
     // Use this for initialization
@@ -30,7 +31,14 @@ public class SpawerController : MonoBehaviour {
 
     void Spawn(GameObject ingredientsPrefab)
     {
-        GameObject ingredient = Instantiate(ingredientsPrefab, transform.position, transform.rotation * Quaternion.Euler(-90, 0, 0)) as GameObject;
+        GameObject ingredient;
+        if (ingredientsPrefab.GetComponent<Ingredients>().type == 0)
+        {
+            ingredient = Instantiate(ingredientsPrefab, transform.position, transform.rotation * Quaternion.Euler(-90, 0, 0)) as GameObject;
+        }
+        else {
+            ingredient = Instantiate(ingredientsPrefab, transform.position, transform.rotation * Quaternion.Euler(145, 0, 0)) as GameObject;
+        }
         ingredient.transform.parent = ingredientContainer.transform;
     }
 
