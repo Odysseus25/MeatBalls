@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: be62679879be55347b8689ff428515ab
+timeCreated: 1460822482
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cilantro|Cilantro Leaf|Dupli|10.0
+    100004: Cilantro|Cilantro Leaf|Dupli|11.0
+    100006: Cilantro|Cilantro Leaf|Dupli|12.0
+    100008: Cilantro|Cilantro Leaf|Dupli|13.0
+    100010: Cilantro|Cilantro Leaf|Dupli|14.0
+    100012: Cilantro|Cilantro Leaf|Dupli|15.0
+    100014: Cilantro|Cilantro Leaf|Dupli|16.0
+    100016: Cilantro|Cilantro Leaf|Dupli|17.0
+    100018: Cilantro|Cilantro Leaf|Dupli|18.0
+    100020: Cilantro|Cilantro Leaf|Dupli|19.0
+    100022: Cilantro|Cilantro Leaf|Dupli|20.0
+    100024: Cilantro|Cilantro Leaf|Dupli|21.0
+    100026: Cilantro|Cilantro Leaf|Dupli|22.0
+    100028: Cilantro|Cilantro Leaf|Dupli|23.0
+    100030: Cilantro|Cilantro Leaf|Dupli|24.0
+    100032: Cilantro|Cilantro Leaf|Dupli|25.0
+    100034: Cilantro|Cilantro Leaf|Dupli|26.0
+    100036: Cilantro|Cilantro Leaf|Dupli|27.0
+    100038: Cilantro|Cilantro Leaf|Dupli|28.0
+    100040: Cilantro|Cilantro Leaf|Dupli|29.0
+    400000: //RootNode
+    400002: Cilantro|Cilantro Leaf|Dupli|10.0
+    400004: Cilantro|Cilantro Leaf|Dupli|11.0
+    400006: Cilantro|Cilantro Leaf|Dupli|12.0
+    400008: Cilantro|Cilantro Leaf|Dupli|13.0
+    400010: Cilantro|Cilantro Leaf|Dupli|14.0
+    400012: Cilantro|Cilantro Leaf|Dupli|15.0
+    400014: Cilantro|Cilantro Leaf|Dupli|16.0
+    400016: Cilantro|Cilantro Leaf|Dupli|17.0
+    400018: Cilantro|Cilantro Leaf|Dupli|18.0
+    400020: Cilantro|Cilantro Leaf|Dupli|19.0
+    400022: Cilantro|Cilantro Leaf|Dupli|20.0
+    400024: Cilantro|Cilantro Leaf|Dupli|21.0
+    400026: Cilantro|Cilantro Leaf|Dupli|22.0
+    400028: Cilantro|Cilantro Leaf|Dupli|23.0
+    400030: Cilantro|Cilantro Leaf|Dupli|24.0
+    400032: Cilantro|Cilantro Leaf|Dupli|25.0
+    400034: Cilantro|Cilantro Leaf|Dupli|26.0
+    400036: Cilantro|Cilantro Leaf|Dupli|27.0
+    400038: Cilantro|Cilantro Leaf|Dupli|28.0
+    400040: Cilantro|Cilantro Leaf|Dupli|29.0
+    2300000: //RootNode
+    2300002: Cilantro|Cilantro Leaf|Dupli|10.0
+    2300004: Cilantro|Cilantro Leaf|Dupli|11.0
+    2300006: Cilantro|Cilantro Leaf|Dupli|12.0
+    2300008: Cilantro|Cilantro Leaf|Dupli|13.0
+    2300010: Cilantro|Cilantro Leaf|Dupli|14.0
+    2300012: Cilantro|Cilantro Leaf|Dupli|15.0
+    2300014: Cilantro|Cilantro Leaf|Dupli|16.0
+    2300016: Cilantro|Cilantro Leaf|Dupli|17.0
+    2300018: Cilantro|Cilantro Leaf|Dupli|18.0
+    2300020: Cilantro|Cilantro Leaf|Dupli|19.0
+    2300022: Cilantro|Cilantro Leaf|Dupli|20.0
+    2300024: Cilantro|Cilantro Leaf|Dupli|21.0
+    2300026: Cilantro|Cilantro Leaf|Dupli|22.0
+    2300028: Cilantro|Cilantro Leaf|Dupli|23.0
+    2300030: Cilantro|Cilantro Leaf|Dupli|24.0
+    2300032: Cilantro|Cilantro Leaf|Dupli|25.0
+    2300034: Cilantro|Cilantro Leaf|Dupli|26.0
+    2300036: Cilantro|Cilantro Leaf|Dupli|27.0
+    2300038: Cilantro|Cilantro Leaf|Dupli|28.0
+    2300040: Cilantro|Cilantro Leaf|Dupli|29.0
+    3300000: //RootNode
+    3300002: Cilantro|Cilantro Leaf|Dupli|10.0
+    3300004: Cilantro|Cilantro Leaf|Dupli|11.0
+    3300006: Cilantro|Cilantro Leaf|Dupli|12.0
+    3300008: Cilantro|Cilantro Leaf|Dupli|13.0
+    3300010: Cilantro|Cilantro Leaf|Dupli|14.0
+    3300012: Cilantro|Cilantro Leaf|Dupli|15.0
+    3300014: Cilantro|Cilantro Leaf|Dupli|16.0
+    3300016: Cilantro|Cilantro Leaf|Dupli|17.0
+    3300018: Cilantro|Cilantro Leaf|Dupli|18.0
+    3300020: Cilantro|Cilantro Leaf|Dupli|19.0
+    3300022: Cilantro|Cilantro Leaf|Dupli|20.0
+    3300024: Cilantro|Cilantro Leaf|Dupli|21.0
+    3300026: Cilantro|Cilantro Leaf|Dupli|22.0
+    3300028: Cilantro|Cilantro Leaf|Dupli|23.0
+    3300030: Cilantro|Cilantro Leaf|Dupli|24.0
+    3300032: Cilantro|Cilantro Leaf|Dupli|25.0
+    3300034: Cilantro|Cilantro Leaf|Dupli|26.0
+    3300036: Cilantro|Cilantro Leaf|Dupli|27.0
+    3300038: Cilantro|Cilantro Leaf|Dupli|28.0
+    3300040: Cilantro|Cilantro Leaf|Dupli|29.0
+    4300000: Cilantro
+    4300002: Cilantro|Cilantro Leaf|Dupli|10.0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
