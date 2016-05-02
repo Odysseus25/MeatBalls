@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Input.gyro.enabled = true;
         float distance = this.transform.position.z - Camera.main.transform.position.z;
         Vector3 leftmost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));   //getting borders of the screen to restrict play space
         Vector3 rightmost = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, distance));
