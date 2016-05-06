@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Clients : MonoBehaviour {
+public class Clients{
     public int difficulty;
     public int[,] preferences;
     public int maxPayment;
     public string clientName;
-    public Sprite[] sprites;
+    public float time;
+    public string gender;
 
     /* Ingredients code
      * Salt = 1
@@ -45,8 +46,11 @@ public class Clients : MonoBehaviour {
         return rnd;
     }
 
-    public void SetClient() {
+    public Clients() {
         difficulty = Random.Range(1, 6);
+    }
+
+    public void SetClient() {
         SetName();
         SetPayment();
         int ingredient1 = 0;
@@ -55,6 +59,7 @@ public class Clients : MonoBehaviour {
 
         switch (difficulty) {
             case 1:
+                clientName = "Jeff";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 preferences = new int[2,2];
@@ -64,8 +69,12 @@ public class Clients : MonoBehaviour {
 
                 preferences[0, 1] = ingredient2;
                 preferences[1, 1] = SetTasteValue();
+
+                Debug.Log("Ingrediente 1 " + preferences[0,0] + " " + preferences[1,0]);
+                Debug.Log("Ingrediente 2 " + preferences[0, 1] + " " + preferences[1, 1]);
                 break;
             case 2:
+                clientName = "John";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 preferences = new int[2, 2];
@@ -75,8 +84,12 @@ public class Clients : MonoBehaviour {
 
                 preferences[0, 1] = ingredient2;
                 preferences[1, 1] = SetTasteValue();
+
+                Debug.Log("Ingrediente 1 " + preferences[0, 0] + " " + preferences[1, 0]);
+                Debug.Log("Ingrediente 2 " + preferences[0, 1] + " " + preferences[1, 1]);
                 break;
             case 3:
+                clientName = "Jason";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 ingredient3 = GetRandom();
@@ -90,8 +103,13 @@ public class Clients : MonoBehaviour {
 
                 preferences[0, 2] = ingredient3;
                 preferences[1, 2] = SetTasteValue();
+
+                Debug.Log("Ingrediente 1 " + preferences[0, 0] + " " + preferences[1, 0]);
+                Debug.Log("Ingrediente 2 " + preferences[0, 1] + " " + preferences[1, 1]);
+                Debug.Log("Ingrediente 3 " + preferences[0, 2] + " " + preferences[1, 2]);
                 break;
             case 4:
+                clientName = "Julio";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 ingredient3 = GetRandom();
@@ -105,11 +123,14 @@ public class Clients : MonoBehaviour {
 
                 preferences[0, 2] = ingredient3;
                 preferences[1, 2] = SetTasteValue();
-                
-                //agregar ingredientes malos
 
+                //agregar ingredientes malos
+                Debug.Log("Ingrediente 1 " + preferences[0, 0] + " " + preferences[1, 0]);
+                Debug.Log("Ingrediente 2 " + preferences[0, 1] + " " + preferences[1, 1]);
+                Debug.Log("Ingrediente 3 " + preferences[0, 2] + " " + preferences[1, 2]);
                 break;
             case 5:
+                clientName = "Jeffry";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 ingredient3 = GetRandom();
@@ -125,7 +146,9 @@ public class Clients : MonoBehaviour {
                 preferences[1, 2] = SetTasteValue();
 
                 //agregar ingredientes malos
-
+                Debug.Log("Ingrediente 1 " + preferences[0, 0] + " " + preferences[1, 0]);
+                Debug.Log("Ingrediente 2 " + preferences[0, 1] + " " + preferences[1, 1]);
+                Debug.Log("Ingrediente 3 " + preferences[0, 2] + " " + preferences[1, 2]);
                 break;
         }
     }
