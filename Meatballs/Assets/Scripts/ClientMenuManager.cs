@@ -2,16 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ClientsManager : MonoBehaviour {
+public class ClientMenuManager : MonoBehaviour {
 
-    private GameController list;
+    private ClientController list;
     private Clients actualClient;
 
     public GameObject clientCard;
 
 	// Use this for initialization
 	void Start () {
-	    list = FindObjectOfType<GameController>();
+	    list = FindObjectOfType<ClientController>();
         PopulateList();
     }
 
@@ -26,15 +26,9 @@ public class ClientsManager : MonoBehaviour {
            card.transform.localPosition = new Vector3(468f, -225f - increment, 0);
 
            actualClient = list.clientList[i];
-           //Debug.Log(actualClient.clientName);
            card.GetComponent<ClientCard>().GetInfo(list.clientList, i);
            increment += 425f;
        }
     }
-
-    // Update is called once per frame
-    void Update () {
-	
-	}
 
 }

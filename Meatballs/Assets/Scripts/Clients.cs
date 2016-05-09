@@ -6,8 +6,11 @@ public class Clients{
     public int[,] preferences;
     public int maxPayment;
     public string clientName;
-    public float time;
-    public string gender;
+    public float time;      //time in seconds 
+    public char gender;
+
+    private string[] maleNames;
+    private string[] femaleNames;
 
     /* Ingredients code
      * Salt = 1
@@ -24,7 +27,13 @@ public class Clients{
      * 5 estrellas = igual que el 4 pero mas velocidad. 
      */
 
-    private void SetPayment() {
+
+    public Clients()
+    {
+        difficulty = Random.Range(1, 6);
+    }
+
+    void SetPayment() {
         switch (difficulty) {
             case 1:
                 break;
@@ -39,20 +48,75 @@ public class Clients{
         }
     }
 
-    private void SetName() { }
+    void SetName() { }
 
-    private int GetRandom(){
-        int rnd = Random.Range(1, 7);
+    void SetGender()
+    {
+        float rnd = Random.Range(0f, 1f);
+        if (rnd >= 0f && rnd <= 0.49f)
+        {
+            gender = 'm';
+        }
+        else
+        {
+            gender = 'f';
+        }
+    }
+
+    void SetTime() {
+        switch(difficulty) {
+            case 1:
+                time = 30f;
+                break;
+            case 2:
+                time = 45f;
+                break;
+            case 3:
+                time = 60f;
+                break;
+            case 4:
+                time = 75f;
+                break;
+            case 5:
+                time = 90f;
+                break;
+        }
+    }
+
+    int GetRandom(){
+        int rnd = Random.Range(1, 6);
         return rnd;
     }
 
-    public Clients() {
-        difficulty = Random.Range(1, 6);
+    int SetTasteValue()
+    {
+        int tasteValue = 0;
+        float tastePercent = Random.Range(0f, 1f);
+        if (tastePercent >= 0 && tastePercent <= 0.24f)
+        {
+            tasteValue = 1;
+        }
+        else if (tastePercent >= 0.25f && tastePercent <= 0.5f)
+        {
+            tasteValue = 2;
+        }
+        else if (tastePercent >= 0.51f && tastePercent <= 0.74f)
+        {
+            tasteValue = 3;
+        }
+        else
+        {
+            tasteValue = 4;
+        }
+        return tasteValue;
     }
 
     public void SetClient() {
+        SetGender();
         SetName();
+        SetTime();
         SetPayment();
+
         int ingredient1 = 0;
         int ingredient2 = 0;
         int ingredient3 = 0;
@@ -62,6 +126,9 @@ public class Clients{
                 clientName = "Jeff";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
+                while (ingredient2 == ingredient1) {
+                    ingredient2 = GetRandom();
+                }
                 preferences = new int[2,2];
 
                 preferences[0, 0] = ingredient1;
@@ -77,6 +144,10 @@ public class Clients{
                 clientName = "John";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
+                while (ingredient2 == ingredient1)
+                {
+                    ingredient2 = GetRandom();
+                }
                 preferences = new int[2, 2];
 
                 preferences[0, 0] = ingredient1;
@@ -92,7 +163,15 @@ public class Clients{
                 clientName = "Jason";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
+                while (ingredient2 == ingredient1)
+                {
+                    ingredient2 = GetRandom();
+                }
                 ingredient3 = GetRandom();
+                while (ingredient3 == ingredient1 || ingredient3 == ingredient2)
+                {
+                    ingredient3 = GetRandom();
+                }
                 preferences = new int[2, 3];
 
                 preferences[0, 0] = ingredient1;
@@ -112,7 +191,15 @@ public class Clients{
                 clientName = "Julio";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
+                while (ingredient2 == ingredient1)
+                {
+                    ingredient2 = GetRandom();
+                }
                 ingredient3 = GetRandom();
+                while (ingredient3 == ingredient1 || ingredient3 == ingredient2)
+                {
+                    ingredient3 = GetRandom();
+                }
                 preferences = new int[2, 3];
 
                 preferences[0, 0] = ingredient1;
@@ -133,7 +220,15 @@ public class Clients{
                 clientName = "Jeffry";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
+                while (ingredient2 == ingredient1)
+                {
+                    ingredient2 = GetRandom();
+                }
                 ingredient3 = GetRandom();
+                while (ingredient3 == ingredient1 || ingredient3 == ingredient2)
+                {
+                    ingredient3 = GetRandom();
+                }
                 preferences = new int[2, 3];
 
                 preferences[0, 0] = ingredient1;
@@ -151,26 +246,5 @@ public class Clients{
                 Debug.Log("Ingrediente 3 " + preferences[0, 2] + " " + preferences[1, 2]);
                 break;
         }
-    }
-
-    private int SetTasteValue() {
-        int tasteValue = 0;
-        float tastePercent = Random.Range(0f, 1f);
-        if (tastePercent >= 0 && tastePercent <= 0.24f)
-        {
-            tasteValue = 1;
-        }
-        else if (tastePercent >= 0.25f && tastePercent <= 0.5f)
-        {
-            tasteValue = 2;
-        }
-        else if (tastePercent >= 0.51f && tastePercent <= 0.74f)
-        {
-            tasteValue = 3;
-        }
-        else {
-            tasteValue = 4;
-        }
-        return tasteValue;
     }
 }

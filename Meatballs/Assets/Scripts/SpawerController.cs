@@ -6,10 +6,16 @@ public class SpawerController : MonoBehaviour {
     public GameObject[] ingredientsPrefab;
 
     private GameObject ingredientContainer;
+    private ClientController list;
+    private Clients actualClient;
 
     // Use this for initialization
     void Start()
     {
+        list = FindObjectOfType<ClientController>();
+        actualClient = list.clientList[ClientCard.selectedCard];
+        SetIngridients();
+
         ingredientContainer = GameObject.Find("Ingredients");
         if (!ingredientContainer)
         {
@@ -22,10 +28,23 @@ public class SpawerController : MonoBehaviour {
     {
         foreach (GameObject thisIngredient in ingredientsPrefab)
         {
-            if (isTimeToSpawn(thisIngredient))
-            {
-                Spawn(thisIngredient);
+            if (thisIngredient.GetComponent<Ingredients>().isWanted) {
+                if (isTimeToSpawn(thisIngredient))
+                {
+                    Spawn(thisIngredient);
+                }
             }
+        }
+    }
+
+    void SetIngridients() {
+        foreach (GameObject obj in ingredientsPrefab) {  
+            Debug.Log(obj.name + obj.GetComponent<Ingredients>().isWanted);
+        }
+        for (int i = 0; i < actualClient.preferences.GetLength(1); i++) {
+            Debug.Log("la i es " + i);
+            ingredientsPrefab[actualClient.preferences[0,i]].GetComponent<Ingredients>().isWanted = true;
+            Debug.Log("el ingrediente es " + actualClient.preferences[0, i]);
         }
     }
 
