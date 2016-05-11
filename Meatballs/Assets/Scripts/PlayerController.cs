@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
     public int moveSpeed = 0;
     public float rotationSpeed = 0;
 
-    private float padding = 0.5f;
+    public float padding = 0.5f;
     private float xMin, xMax;
 
 	// Use this for initialization
@@ -50,6 +50,18 @@ public class PlayerController : MonoBehaviour {
 
     void RotateBall() {
         transform.Rotate(new Vector3(-rotationSpeed, 0, 0) * Time.deltaTime);
+    }
+
+    void AdjustPadding() {
+        float oldPadding = padding;
+        padding = (float) (transform.localScale.x * 0.5);
+        xMin += padding - oldPadding;
+        xMax -= padding - oldPadding;
+    }
+
+    public void IncreaseSize() {
+        transform.localScale += new Vector3(0.1F, 0.1f, 0.1f);
+        AdjustPadding();
     }
 
 }

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class PanelManager : MonoBehaviour {
 
     private ClientController list;
-    private Clients actualClient;
 
+    public static Clients actualClient;
     public static float time;
 
 	// Use this for initialization
@@ -19,6 +19,7 @@ public class PanelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         UpdateTime();
+        UpdateText();
 	}
 
     void SetText() {
@@ -90,5 +91,59 @@ public class PanelManager : MonoBehaviour {
         transform.GetChild(3).GetComponent<Text>().text = string.Format("{0:0}:{1:00}", minutes, seconds);
     }
 
-    void UpdateText() { }
+    void UpdateText() {
+        foreach (Transform ingridientText in transform) {
+            if (ingridientText.GetComponent<Text>().text == "Salt")
+            {
+                SetTextColor(ingridientText, 1);
+            }
+            else if (ingridientText.GetComponent<Text>().text == "Pepper")
+            {
+                SetTextColor(ingridientText, 2);
+            }
+            else if (ingridientText.GetComponent<Text>().text == "Onion")
+            {
+                SetTextColor(ingridientText, 3);
+            }
+            else if (ingridientText.GetComponent<Text>().text == "Sweet Pepper")
+            {
+                SetTextColor(ingridientText, 4);
+            }
+            else if(ingridientText.GetComponent<Text>().text == "Cilantro")
+            {
+                SetTextColor(ingridientText, 5);
+            }
+        }
+    }
+
+    void SetTextColor(Transform ingridientText, int index) {
+        if (GameController.ingredientConcentration[index] == 0f)
+        {
+
+        }
+        else {
+            if (GameController.ingredientConcentration[index] > 0f && GameController.ingredientConcentration[index] <= 25f)
+            {
+                ingridientText.GetComponent<Text>().color = Color.green;
+            }
+            else if (GameController.ingredientConcentration[index] > 25f && GameController.ingredientConcentration[index] <= 50f)
+            {
+                ingridientText.GetComponent<Text>().color = Color.yellow;
+            }
+            else if (GameController.ingredientConcentration[index] > 50f && GameController.ingredientConcentration[index] <= 75f)
+            {
+                Color orange = new Color();
+                orange.r = 210f/255f;
+                orange.g = 69f/255f;
+                orange.b = 0f;
+                orange.a = 1f;
+                ingridientText.GetComponent<Text>().color = orange;
+            }
+            else
+            {
+                ingridientText.GetComponent<Text>().color = Color.red;
+            }
+        }
+    }
 }
+

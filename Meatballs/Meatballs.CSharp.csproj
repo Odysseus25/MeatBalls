@@ -82,8 +82,10 @@
     <Compile Include="Assets\Scripts\ClientController.cs" />
     <Compile Include="Assets\Scripts\ClientMenuManager.cs" />
     <Compile Include="Assets\Scripts\Clients.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Ingredients.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Meat.cs" />
     <Compile Include="Assets\Scripts\PanelManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScrollingController.cs" />

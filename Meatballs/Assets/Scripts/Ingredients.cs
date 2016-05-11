@@ -7,13 +7,17 @@ public class Ingredients : MonoBehaviour
     public int moveSpeed = 0;
     public float rotationSpeed = 0;
     public float timeToSpawn = 0;
-    public bool isWanted = false;
+    public bool isWanted;
+    public int value = 1;
     public int type = 0;
+
+    PlayerController player;
 
     // Use this for initialization
     void Start()
     {
-
+        isWanted = false;
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -34,9 +38,14 @@ public class Ingredients : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col){
-        Debug.Log("Triggered by " + col);
         PlayerController player = col.GetComponent<PlayerController>();
         if (player){
+            if (type == 0) {
+                player.IncreaseSize();
+            }
+            else {
+                GameController.IncreaseConcentration(type);
+            }
             Destroy(gameObject);
         }
     }

@@ -51,7 +51,7 @@ public class SpawerController : MonoBehaviour {
     void Spawn(GameObject ingredientsPrefab)
     {
         GameObject ingredient;
-        if (ingredientsPrefab.GetComponent<Ingredients>().type == 0)
+        if (ingredientsPrefab.GetComponent<Ingredients>().type != 0 && ingredientsPrefab.GetComponent<Ingredients>().type != 3)
         {
             ingredient = Instantiate(ingredientsPrefab, transform.position, transform.rotation * Quaternion.Euler(-90, 0, 0)) as GameObject;
         }
