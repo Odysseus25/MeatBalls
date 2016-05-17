@@ -15,8 +15,13 @@ public class LevelManager : MonoBehaviour
         Application.Quit();
     }
 
-   /* public void LoadNextLevel()
+    public void Reload()
     {
-        SceneManager.LoadScene(Application.loadedLevel + 1);
-    }*/
+        SceneManager.LoadScene(Application.loadedLevel);
+    }
+
+    /* public void LoadNextLevel()
+     {
+         SceneManager.LoadScene(Application.loadedLevel + 1);
+     }*/
 }
