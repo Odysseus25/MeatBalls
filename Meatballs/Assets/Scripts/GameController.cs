@@ -112,13 +112,20 @@ public class GameController : MonoBehaviour
             case 1:
                 ingredient1 = PanelManager.actualClient.maxPayment / 2;
                 ingredient2 = PanelManager.actualClient.maxPayment / 2;
-
+                
                 break;
             case 2:
                 ingredient1 = PanelManager.actualClient.maxPayment / 3;
                 ingredient2 = PanelManager.actualClient.maxPayment / 3;
                 ingredient3 = PanelManager.actualClient.maxPayment / 3;
                 break;
+        }
+    }
+
+    void CalculateIngredientPayment(float ingredient, float myConcentration, int pos) {
+        float dif = PanelManager.actualClient.preferences[1, pos] - myConcentration;
+        if (myConcentration) {
+
         }
     }
 }
