@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     Animator anim;
     GameObject[] pauseMenu;
     GameObject[] winPopUp;
+    ClientController controller;
 
     public static float[] ingredientConcentration;
     public static float[] concentrationMultipliers;
@@ -16,6 +17,7 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        controller = FindObjectOfType<ClientController>();
         ingredientConcentration = new float[6];
         concentrationMultipliers = new float[6];
         for (int i = 0; i < 6; i++) {
@@ -44,9 +46,16 @@ public class GameController : MonoBehaviour
         if (PanelManager.time <= 0f)
         {
             Debug.Log("Time is up");
+            CalculatePayment();
+            ClientController.moneyInBank += finalPayment;
+            DeleteClient(ClientCard.selectedCard);
             ShowWinPopUp();
             hasTimeExpired = true;
         }
+    }
+
+    void DeleteClient(int index) {
+        controller.clientList.RemoveAt(index);
     }
 
     public void ResumeGame() {
@@ -97,35 +106,74 @@ public class GameController : MonoBehaviour
     }
 
     public void CalculatePayment(){
-        float ingredient1 = 0;
-        float ingredient2 = 0;
-        float ingredient3 = 0;
+        float ingredientValue1 = 0;
+        float ingredientValue2 = 0;
+        float ingredientValue3 = 0;
         int cases = 0;
-        if (PanelManager.actualClient.difficulty < 2)
+        if (PanelManager.actualClient.difficulty <= 2)
         {
-            cases = 2;
+            cases = 1;
         }
         else {
-            cases = 1;
+            cases = 2;
         }
         switch (cases) {
             case 1:
-                ingredient1 = PanelManager.actualClient.maxPayment / 2;
-                ingredient2 = PanelManager.actualClient.maxPayment / 2;
-                
+                ingredientValue1 = PanelManager.actualClient.maxPayment / 2;
+                ingredientValue2 = PanelManager.actualClient.maxPayment / 2;
+                finalPayment = (int)(CalculateIngredientPayment(ingredientValue1, ingredientConcentration[PanelManager.actualClient.preferences[0,0]], 0) + CalculateIngredientPayment(ingredientValue2, ingredientConcentration[PanelManager.actualClient.preferences[0, 1]], 1));
+                Debug.Log("Final Payment" + finalPayment);
                 break;
             case 2:
-                ingredient1 = PanelManager.actualClient.maxPayment / 3;
-                ingredient2 = PanelManager.actualClient.maxPayment / 3;
-                ingredient3 = PanelManager.actualClient.maxPayment / 3;
+                ingredientValue1 = PanelManager.actualClient.maxPayment / 3;
+                ingredientValue2 = PanelManager.actualClient.maxPayment / 3;
+                ingredientValue3 = PanelManager.actualClient.maxPayment / 3;
+                finalPayment = (int)(CalculateIngredientPayment(ingredientValue1, ingredientConcentration[PanelManager.actualClient.preferences[0, 0]], 0) + CalculateIngredientPayment(ingredientValue2, ingredientConcentration[PanelManager.actualClient.preferences[0, 1]], 1) + CalculateIngredientPayment(ingredientValue3, ingredientConcentration[PanelManager.actualClient.preferences[0, 2]], 2));
+                Debug.Log("Final Payment" + finalPayment);
                 break;
         }
     }
 
-    void CalculateIngredientPayment(float ingredient, float myConcentration, int pos) {
-        float dif = PanelManager.actualClient.preferences[1, pos] - myConcentration;
-        if (myConcentration) {
-
+    float CalculateIngredientPayment(float ingredientValue, float myConcentration, int pos) {
+        float payment = 0;
+        int tasteValue = 0;
+        switch (PanelManager.actualClient.preferences[1, pos]) {
+            case 1:
+                tasteValue = 25;
+                break;
+            case 2:
+                tasteValue = 50;
+                break;
+            case 3:
+                tasteValue = 75;
+                break;
+            case 4:
+                tasteValue = 100;
+                break;
         }
+        float dif = tasteValue - myConcentration;
+        if (dif < 0) {
+            dif *= -1;
+        }
+        Debug.Log("dif " + dif);
+        if (dif < 25f)
+        {
+            payment = ingredientValue;
+        }
+        else if (dif < 50f)
+        {
+            float percent = ingredientValue * 0.33f;
+            payment = ingredientValue - percent;
+        }
+        else if (dif < 75)
+        {
+            float percent = ingredientValue * 0.66f;
+            payment = ingredientValue - percent;
+        }
+        else {
+            payment = 0;
+        }
+        Debug.Log("Payment " + payment);
+        return payment;
     }
 }

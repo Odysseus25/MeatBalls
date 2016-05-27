@@ -20,6 +20,12 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(Application.loadedLevel);
     }
 
+    public void changeLevelAndSave(string name)
+    {
+        ClientController.controller.Save();
+        SceneManager.LoadScene(name);
+    }
+
     /* public void LoadNextLevel()
      {
          SceneManager.LoadScene(Application.loadedLevel + 1);

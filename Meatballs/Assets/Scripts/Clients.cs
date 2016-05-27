@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
+[Serializable]
 public class Clients{
     public int difficulty;
     public int[,] preferences;
@@ -30,20 +32,25 @@ public class Clients{
 
     public Clients()
     {
-        difficulty = Random.Range(1, 6);
+        difficulty = UnityEngine.Random.Range(1, 6);
     }
 
     void SetPayment() {
         switch (difficulty) {
             case 1:
+                maxPayment = 10;
                 break;
             case 2:
+                maxPayment = 20;
                 break;
             case 3:
+                maxPayment = 30;
                 break;
             case 4:
+                maxPayment = 40;
                 break;
             case 5:
+                maxPayment = 50;
                 break;
         }
     }
@@ -52,7 +59,7 @@ public class Clients{
 
     void SetGender()
     {
-        float rnd = Random.Range(0f, 1f);
+        float rnd = UnityEngine.Random.Range(0f, 1f);
         if (rnd >= 0f && rnd <= 0.49f)
         {
             gender = 'm';
@@ -84,14 +91,14 @@ public class Clients{
     }
 
     int GetRandom(){
-        int rnd = Random.Range(1, 6);
+        int rnd = UnityEngine.Random.Range(1, 6);
         return rnd;
     }
 
     int SetTasteValue()
     {
         int tasteValue = 0;
-        float tastePercent = Random.Range(0f, 1f);
+        float tastePercent = UnityEngine.Random.Range(0f, 1f);
         if (tastePercent >= 0 && tastePercent <= 0.24f)
         {
             tasteValue = 1;

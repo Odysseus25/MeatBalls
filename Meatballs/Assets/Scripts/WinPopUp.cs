@@ -11,6 +11,7 @@ public class WinPopUp : MonoBehaviour
     void Start()
     {
         SetInfo();
+        SetPayment();
     }
 
     void SetInfo()
@@ -63,5 +64,10 @@ public class WinPopUp : MonoBehaviour
             {
                 ingridientText.GetComponentInChildren<Text>().color = Color.red;
             }
+    }
+
+    void SetPayment() {
+        GameObject prizeMoney = GameObject.Find("Prize Money");
+        prizeMoney.GetComponent<Text>().text = "$" + GameController.finalPayment;
     }
 }
