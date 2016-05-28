@@ -11,14 +11,16 @@ public class ClientController : MonoBehaviour {
     public List<Clients> clientList;
     public static int moneyInBank = 0;
     public static int restaurantCategory = 1;
+    public static int clientQueueSize = 5;
+    public DateTime time;
 	
     // Use this for initialization
 	void Start () {
        clientList = new List<Clients>();
         if (!File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
         {
-            CreateClientList();
-            Save();
+            CreateClientList(5);
+            time = DateTime.Now;
             Debug.Log("Archivo nuevo guardado");
         }
         else {
@@ -26,12 +28,13 @@ public class ClientController : MonoBehaviour {
         }
 	}
 
-    void CreateClientList() {
-        for (int i = 0; i < 5; i++) {
+    public void CreateClientList(int quantity) {
+        for (int i = 0; i < quantity; i++) {
             Clients clients = new Clients();
             clients.SetClient();
             clientList.Add(clients);
         }
+        Save();
     }
 
     void Awake() {
@@ -49,7 +52,7 @@ public class ClientController : MonoBehaviour {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
 
-        PlayerData data = new PlayerData(clientList, moneyInBank, restaurantCategory);
+        PlayerData data = new PlayerData(clientList, moneyInBank, restaurantCategory, clientQueueSize, time);
 
         bf.Serialize(file, data);
         file.Close();
@@ -67,6 +70,8 @@ public class ClientController : MonoBehaviour {
             clientList = data.clientList;
             moneyInBank = data.moneyInBank;
             restaurantCategory = data.restaurantCategory;
+            clientQueueSize = data.clientQueueSize;
+            time = data.time;
 
             Debug.Log("Archivo cargado");
         }
@@ -78,10 +83,14 @@ class PlayerData {
     public List<Clients> clientList;
     public int moneyInBank;
     public int restaurantCategory;
+    public int clientQueueSize;
+    public DateTime time;
 
-    public PlayerData(List<Clients> list, int money, int category) {
+    public PlayerData(List<Clients> list, int money, int category, int queueSize, DateTime timeStamp) {
         clientList = list;
         moneyInBank = money;
+        clientQueueSize = queueSize;
         restaurantCategory = category;
+        time = timeStamp;
     }
 }
