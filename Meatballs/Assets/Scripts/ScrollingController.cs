@@ -9,7 +9,8 @@ public class ScrollingController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rend = GetComponent<Renderer>();
-	}
+        rend.material.mainTextureOffset = new Vector2(0, 0);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,7 +18,7 @@ public class ScrollingController : MonoBehaviour {
 	}
 
     void ScrollTexture() {
-        float offset = scrollSpeed * Time.time;
+        float offset = scrollSpeed * Time.timeSinceLevelLoad;
         rend.material.mainTextureOffset = new Vector2(0, -offset);
     }
 }

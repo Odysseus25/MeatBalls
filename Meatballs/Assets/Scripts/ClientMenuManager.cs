@@ -5,6 +5,7 @@ using System;
 
 public class ClientMenuManager : MonoBehaviour {
 
+    private AdManager ads;
     private ClientController list;
     private Clients actualClient;
     private DateTime now;
@@ -14,7 +15,17 @@ public class ClientMenuManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	    list = FindObjectOfType<ClientController>();
-        if (list.clientList.Count < ClientController.clientQueueSize) {
+        ads = FindObjectOfType<AdManager>();
+        CheckNewClients();
+        PopulateList();
+        if (list.clientList.Count == 0) {
+            ads.ShowAd();
+        }
+    }
+
+    void CheckNewClients() {
+        if (list.clientList.Count < ClientController.clientQueueSize)
+        {
             now = DateTime.Now;
             Debug.Log("now " + now);
             TimeSpan difference = now.Subtract(list.time);
@@ -23,26 +34,29 @@ public class ClientMenuManager : MonoBehaviour {
             {
                 Debug.Log("days " + difference.Days);
                 list.time = DateTime.Now;
-                list.CreateClientList(list.clientList.Count - ClientController.clientQueueSize);
+                list.CreateClientList((ClientController.clientQueueSize - list.clientList.Count));
             }
-            else {
-                int minutes = (difference.Hours * 60) + difference.Minutes;
+            else
+            {
+                int minutes = (difference.Hours * 60) + difference.Minutes + ClientController.nextClientProgress;
                 Debug.Log("minutes " + minutes);
-                if ((minutes/5) >= 1 && (minutes/5) > ClientController.clientQueueSize)
+                if ((minutes / 5) >= 1 && (minutes / 5) > ClientController.clientQueueSize)
                 {
                     Debug.Log("1 ");
                     list.time = DateTime.Now;
-                    list.CreateClientList(list.clientList.Count - ClientController.clientQueueSize);
+                    ClientController.nextClientProgress = minutes % 5;
+                    Debug.Log("size " + (list.clientList.Count - ClientController.clientQueueSize));
+                    list.CreateClientList((ClientController.clientQueueSize - list.clientList.Count));
                 }
-                else if((minutes / 5) >= 1)
+                else if ((minutes / 5) >= 1)
                 {
                     Debug.Log("2 ");
                     list.time = DateTime.Now;
-                    list.CreateClientList(minutes/5);
+                    ClientController.nextClientProgress = minutes % 5;
+                    list.CreateClientList(minutes / 5);
                 }
             }
         }
-        PopulateList();
     }
 
     void PopulateList() {

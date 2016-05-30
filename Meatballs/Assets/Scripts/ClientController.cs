@@ -12,8 +12,10 @@ public class ClientController : MonoBehaviour {
     public static int moneyInBank = 0;
     public static int restaurantCategory = 1;
     public static int clientQueueSize = 5;
+    public static int nextClientProgress = 0;
     public DateTime time;
-	
+
+
     // Use this for initialization
 	void Start () {
        clientList = new List<Clients>();
@@ -52,7 +54,7 @@ public class ClientController : MonoBehaviour {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
 
-        PlayerData data = new PlayerData(clientList, moneyInBank, restaurantCategory, clientQueueSize, time);
+        PlayerData data = new PlayerData(clientList, moneyInBank, restaurantCategory, clientQueueSize, time, nextClientProgress);
 
         bf.Serialize(file, data);
         file.Close();
@@ -72,6 +74,7 @@ public class ClientController : MonoBehaviour {
             restaurantCategory = data.restaurantCategory;
             clientQueueSize = data.clientQueueSize;
             time = data.time;
+            nextClientProgress = data.nextClientProgress;
 
             Debug.Log("Archivo cargado");
         }
@@ -84,13 +87,15 @@ class PlayerData {
     public int moneyInBank;
     public int restaurantCategory;
     public int clientQueueSize;
+    public int nextClientProgress;
     public DateTime time;
 
-    public PlayerData(List<Clients> list, int money, int category, int queueSize, DateTime timeStamp) {
+    public PlayerData(List<Clients> list, int money, int category, int queueSize, DateTime timeStamp, int clientTime) {
         clientList = list;
         moneyInBank = money;
         clientQueueSize = queueSize;
         restaurantCategory = category;
         time = timeStamp;
+        nextClientProgress = clientTime;
     }
 }
