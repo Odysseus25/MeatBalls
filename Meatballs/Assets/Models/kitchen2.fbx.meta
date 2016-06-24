@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: 00e3768147cded841b0c85e19c4cbd89
+timeCreated: 1466365072
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Chopping Board
+    100002: Cilantro
+    100004: Cilantro.001
+    100006: Cilantro.001|Cilantro Leaf|Dupli|10.0
+    100008: Cilantro.001|Cilantro Leaf|Dupli|11.0
+    100010: Cilantro.001|Cilantro Leaf|Dupli|12.0
+    100012: Cilantro.001|Cilantro Leaf|Dupli|13.0
+    100014: Cilantro.001|Cilantro Leaf|Dupli|14.0
+    100016: Cilantro.001|Cilantro Leaf|Dupli|15.0
+    100018: Cilantro.001|Cilantro Leaf|Dupli|16.0
+    100020: Cilantro.001|Cilantro Leaf|Dupli|17.0
+    100022: Cilantro.001|Cilantro Leaf|Dupli|18.0
+    100024: Cilantro.001|Cilantro Leaf|Dupli|19.0
+    100026: Cilantro.001|Cilantro Leaf|Dupli|20.0
+    100028: Cilantro.001|Cilantro Leaf|Dupli|21.0
+    100030: Cilantro.001|Cilantro Leaf|Dupli|22.0
+    100032: Cilantro.001|Cilantro Leaf|Dupli|23.0
+    100034: Cilantro.001|Cilantro Leaf|Dupli|24.0
+    100036: Cilantro.001|Cilantro Leaf|Dupli|25.0
+    100038: Cilantro.001|Cilantro Leaf|Dupli|26.0
+    100040: Cilantro.001|Cilantro Leaf|Dupli|27.0
+    100042: Cilantro.001|Cilantro Leaf|Dupli|28.0
+    100044: Cilantro.001|Cilantro Leaf|Dupli|29.0
+    100046: Cilantro.002
+    100048: Cilantro.002|Cilantro Leaf|Dupli|10.0
+    100050: Cilantro.002|Cilantro Leaf|Dupli|11.0
+    100052: Cilantro.002|Cilantro Leaf|Dupli|12.0
+    100054: Cilantro.002|Cilantro Leaf|Dupli|13.0
+    100056: Cilantro.002|Cilantro Leaf|Dupli|14.0
+    100058: Cilantro.002|Cilantro Leaf|Dupli|15.0
+    100060: Cilantro.002|Cilantro Leaf|Dupli|16.0
+    100062: Cilantro.002|Cilantro Leaf|Dupli|17.0
+    100064: Cilantro.002|Cilantro Leaf|Dupli|18.0
+    100066: Cilantro.002|Cilantro Leaf|Dupli|19.0
+    100068: Cilantro.002|Cilantro Leaf|Dupli|20.0
+    100070: Cilantro.002|Cilantro Leaf|Dupli|21.0
+    100072: Cilantro.002|Cilantro Leaf|Dupli|22.0
+    100074: Cilantro.002|Cilantro Leaf|Dupli|23.0
+    100076: Cilantro.002|Cilantro Leaf|Dupli|24.0
+    100078: Cilantro.002|Cilantro Leaf|Dupli|25.0
+    100080: Cilantro.002|Cilantro Leaf|Dupli|26.0
+    100082: Cilantro.002|Cilantro Leaf|Dupli|27.0
+    100084: Cilantro.002|Cilantro Leaf|Dupli|28.0
+    100086: Cilantro.002|Cilantro Leaf|Dupli|29.0
+    100088: Cilantro|Cilantro Leaf|Dupli|10.0
+    100090: Cilantro|Cilantro Leaf|Dupli|11.0
+    100092: Cilantro|Cilantro Leaf|Dupli|12.0
+    100094: Cilantro|Cilantro Leaf|Dupli|13.0
+    100096: Cilantro|Cilantro Leaf|Dupli|14.0
+    100098: Cilantro|Cilantro Leaf|Dupli|15.0
+    100100: Cilantro|Cilantro Leaf|Dupli|16.0
+    100102: Cilantro|Cilantro Leaf|Dupli|17.0
+    100104: Cilantro|Cilantro Leaf|Dupli|18.0
+    100106: Cilantro|Cilantro Leaf|Dupli|19.0
+    100108: Cilantro|Cilantro Leaf|Dupli|20.0
+    100110: Cilantro|Cilantro Leaf|Dupli|21.0
+    100112: Cilantro|Cilantro Leaf|Dupli|22.0
+    100114: Cilantro|Cilantro Leaf|Dupli|23.0
+    100116: Cilantro|Cilantro Leaf|Dupli|24.0
+    100118: Cilantro|Cilantro Leaf|Dupli|25.0
+    100120: Cilantro|Cilantro Leaf|Dupli|26.0
+    100122: Cilantro|Cilantro Leaf|Dupli|27.0
+    100124: Cilantro|Cilantro Leaf|Dupli|28.0
+    100126: Cilantro|Cilantro Leaf|Dupli|29.0
+    100128: 'Cooking Disk '
+    100130: Cooking Disk 1
+    100132: Cooking Disk 2
+    100134: Cooking Disk 3
+    100136: Cube
+    100138: Cube.000
+    100140: Cube.001
+    100142: Cube.002
+    100144: Cube.003
+    100146: Cube.004
+    100148: Cube.005
+    100150: Cube.006
+    100152: Cube.007
+    100154: Cube.008
+    100156: Cube.009
+    100158: Floor
+    100160: Gas Cooker
+    100162: Gas Cooker Metal Rim
+    100164: //RootNode
+    100166: Knife
+    100168: Long Windows Glass
+    100170: Meat
+    100172: Onion
+    100174: Pepper
+    100176: Plate
+    100178: Regulator
+    100180: Roof
+    100182: Salt
+    100184: Samll Meatball
+    100186: Sink
+    100188: Small Windows Glass
+    100190: Sweet Pepper
+    100192: Table
+    100194: Table Feet
+    100196: TragaLuz
+    100198: Water Pipe
+    100200: Window
+    100202: Window Frame
+    400000: Chopping Board
+    400002: Cilantro
+    400004: Cilantro.001
+    400006: Cilantro.001|Cilantro Leaf|Dupli|10.0
+    400008: Cilantro.001|Cilantro Leaf|Dupli|11.0
+    400010: Cilantro.001|Cilantro Leaf|Dupli|12.0
+    400012: Cilantro.001|Cilantro Leaf|Dupli|13.0
+    400014: Cilantro.001|Cilantro Leaf|Dupli|14.0
+    400016: Cilantro.001|Cilantro Leaf|Dupli|15.0
+    400018: Cilantro.001|Cilantro Leaf|Dupli|16.0
+    400020: Cilantro.001|Cilantro Leaf|Dupli|17.0
+    400022: Cilantro.001|Cilantro Leaf|Dupli|18.0
+    400024: Cilantro.001|Cilantro Leaf|Dupli|19.0
+    400026: Cilantro.001|Cilantro Leaf|Dupli|20.0
+    400028: Cilantro.001|Cilantro Leaf|Dupli|21.0
+    400030: Cilantro.001|Cilantro Leaf|Dupli|22.0
+    400032: Cilantro.001|Cilantro Leaf|Dupli|23.0
+    400034: Cilantro.001|Cilantro Leaf|Dupli|24.0
+    400036: Cilantro.001|Cilantro Leaf|Dupli|25.0
+    400038: Cilantro.001|Cilantro Leaf|Dupli|26.0
+    400040: Cilantro.001|Cilantro Leaf|Dupli|27.0
+    400042: Cilantro.001|Cilantro Leaf|Dupli|28.0
+    400044: Cilantro.001|Cilantro Leaf|Dupli|29.0
+    400046: Cilantro.002
+    400048: Cilantro.002|Cilantro Leaf|Dupli|10.0
+    400050: Cilantro.002|Cilantro Leaf|Dupli|11.0
+    400052: Cilantro.002|Cilantro Leaf|Dupli|12.0
+    400054: Cilantro.002|Cilantro Leaf|Dupli|13.0
+    400056: Cilantro.002|Cilantro Leaf|Dupli|14.0
+    400058: Cilantro.002|Cilantro Leaf|Dupli|15.0
+    400060: Cilantro.002|Cilantro Leaf|Dupli|16.0
+    400062: Cilantro.002|Cilantro Leaf|Dupli|17.0
+    400064: Cilantro.002|Cilantro Leaf|Dupli|18.0
+    400066: Cilantro.002|Cilantro Leaf|Dupli|19.0
+    400068: Cilantro.002|Cilantro Leaf|Dupli|20.0
+    400070: Cilantro.002|Cilantro Leaf|Dupli|21.0
+    400072: Cilantro.002|Cilantro Leaf|Dupli|22.0
+    400074: Cilantro.002|Cilantro Leaf|Dupli|23.0
+    400076: Cilantro.002|Cilantro Leaf|Dupli|24.0
+    400078: Cilantro.002|Cilantro Leaf|Dupli|25.0
+    400080: Cilantro.002|Cilantro Leaf|Dupli|26.0
+    400082: Cilantro.002|Cilantro Leaf|Dupli|27.0
+    400084: Cilantro.002|Cilantro Leaf|Dupli|28.0
+    400086: Cilantro.002|Cilantro Leaf|Dupli|29.0
+    400088: Cilantro|Cilantro Leaf|Dupli|10.0
+    400090: Cilantro|Cilantro Leaf|Dupli|11.0
+    400092: Cilantro|Cilantro Leaf|Dupli|12.0
+    400094: Cilantro|Cilantro Leaf|Dupli|13.0
+    400096: Cilantro|Cilantro Leaf|Dupli|14.0
+    400098: Cilantro|Cilantro Leaf|Dupli|15.0
+    400100: Cilantro|Cilantro Leaf|Dupli|16.0
+    400102: Cilantro|Cilantro Leaf|Dupli|17.0
+    400104: Cilantro|Cilantro Leaf|Dupli|18.0
+    400106: Cilantro|Cilantro Leaf|Dupli|19.0
+    400108: Cilantro|Cilantro Leaf|Dupli|20.0
+    400110: Cilantro|Cilantro Leaf|Dupli|21.0
+    400112: Cilantro|Cilantro Leaf|Dupli|22.0
+    400114: Cilantro|Cilantro Leaf|Dupli|23.0
+    400116: Cilantro|Cilantro Leaf|Dupli|24.0
+    400118: Cilantro|Cilantro Leaf|Dupli|25.0
+    400120: Cilantro|Cilantro Leaf|Dupli|26.0
+    400122: Cilantro|Cilantro Leaf|Dupli|27.0
+    400124: Cilantro|Cilantro Leaf|Dupli|28.0
+    400126: Cilantro|Cilantro Leaf|Dupli|29.0
+    400128: 'Cooking Disk '
+    400130: Cooking Disk 1
+    400132: Cooking Disk 2
+    400134: Cooking Disk 3
+    400136: Cube
+    400138: Cube.000
+    400140: Cube.001
+    400142: Cube.002
+    400144: Cube.003
+    400146: Cube.004
+    400148: Cube.005
+    400150: Cube.006
+    400152: Cube.007
+    400154: Cube.008
+    400156: Cube.009
+    400158: Floor
+    400160: Gas Cooker
+    400162: Gas Cooker Metal Rim
+    400164: //RootNode
+    400166: Knife
+    400168: Long Windows Glass
+    400170: Meat
+    400172: Onion
+    400174: Pepper
+    400176: Plate
+    400178: Regulator
+    400180: Roof
+    400182: Salt
+    400184: Samll Meatball
+    400186: Sink
+    400188: Small Windows Glass
+    400190: Sweet Pepper
+    400192: Table
+    400194: Table Feet
+    400196: TragaLuz
+    400198: Water Pipe
+    400200: Window
+    400202: Window Frame
+    2300000: Chopping Board
+    2300002: Cilantro
+    2300004: Cilantro.001
+    2300006: Cilantro.001|Cilantro Leaf|Dupli|10.0
+    2300008: Cilantro.001|Cilantro Leaf|Dupli|11.0
+    2300010: Cilantro.001|Cilantro Leaf|Dupli|12.0
+    2300012: Cilantro.001|Cilantro Leaf|Dupli|13.0
+    2300014: Cilantro.001|Cilantro Leaf|Dupli|14.0
+    2300016: Cilantro.001|Cilantro Leaf|Dupli|15.0
+    2300018: Cilantro.001|Cilantro Leaf|Dupli|16.0
+    2300020: Cilantro.001|Cilantro Leaf|Dupli|17.0
+    2300022: Cilantro.001|Cilantro Leaf|Dupli|18.0
+    2300024: Cilantro.001|Cilantro Leaf|Dupli|19.0
+    2300026: Cilantro.001|Cilantro Leaf|Dupli|20.0
+    2300028: Cilantro.001|Cilantro Leaf|Dupli|21.0
+    2300030: Cilantro.001|Cilantro Leaf|Dupli|22.0
+    2300032: Cilantro.001|Cilantro Leaf|Dupli|23.0
+    2300034: Cilantro.001|Cilantro Leaf|Dupli|24.0
+    2300036: Cilantro.001|Cilantro Leaf|Dupli|25.0
+    2300038: Cilantro.001|Cilantro Leaf|Dupli|26.0
+    2300040: Cilantro.001|Cilantro Leaf|Dupli|27.0
+    2300042: Cilantro.001|Cilantro Leaf|Dupli|28.0
+    2300044: Cilantro.001|Cilantro Leaf|Dupli|29.0
+    2300046: Cilantro.002
+    2300048: Cilantro.002|Cilantro Leaf|Dupli|10.0
+    2300050: Cilantro.002|Cilantro Leaf|Dupli|11.0
+    2300052: Cilantro.002|Cilantro Leaf|Dupli|12.0
+    2300054: Cilantro.002|Cilantro Leaf|Dupli|13.0
+    2300056: Cilantro.002|Cilantro Leaf|Dupli|14.0
+    2300058: Cilantro.002|Cilantro Leaf|Dupli|15.0
+    2300060: Cilantro.002|Cilantro Leaf|Dupli|16.0
+    2300062: Cilantro.002|Cilantro Leaf|Dupli|17.0
+    2300064: Cilantro.002|Cilantro Leaf|Dupli|18.0
+    2300066: Cilantro.002|Cilantro Leaf|Dupli|19.0
+    2300068: Cilantro.002|Cilantro Leaf|Dupli|20.0
+    2300070: Cilantro.002|Cilantro Leaf|Dupli|21.0
+    2300072: Cilantro.002|Cilantro Leaf|Dupli|22.0
+    2300074: Cilantro.002|Cilantro Leaf|Dupli|23.0
+    2300076: Cilantro.002|Cilantro Leaf|Dupli|24.0
+    2300078: Cilantro.002|Cilantro Leaf|Dupli|25.0
+    2300080: Cilantro.002|Cilantro Leaf|Dupli|26.0
+    2300082: Cilantro.002|Cilantro Leaf|Dupli|27.0
+    2300084: Cilantro.002|Cilantro Leaf|Dupli|28.0
+    2300086: Cilantro.002|Cilantro Leaf|Dupli|29.0
+    2300088: Cilantro|Cilantro Leaf|Dupli|10.0
+    2300090: Cilantro|Cilantro Leaf|Dupli|11.0
+    2300092: Cilantro|Cilantro Leaf|Dupli|12.0
+    2300094: Cilantro|Cilantro Leaf|Dupli|13.0
+    2300096: Cilantro|Cilantro Leaf|Dupli|14.0
+    2300098: Cilantro|Cilantro Leaf|Dupli|15.0
+    2300100: Cilantro|Cilantro Leaf|Dupli|16.0
+    2300102: Cilantro|Cilantro Leaf|Dupli|17.0
+    2300104: Cilantro|Cilantro Leaf|Dupli|18.0
+    2300106: Cilantro|Cilantro Leaf|Dupli|19.0
+    2300108: Cilantro|Cilantro Leaf|Dupli|20.0
+    2300110: Cilantro|Cilantro Leaf|Dupli|21.0
+    2300112: Cilantro|Cilantro Leaf|Dupli|22.0
+    2300114: Cilantro|Cilantro Leaf|Dupli|23.0
+    2300116: Cilantro|Cilantro Leaf|Dupli|24.0
+    2300118: Cilantro|Cilantro Leaf|Dupli|25.0
+    2300120: Cilantro|Cilantro Leaf|Dupli|26.0
+    2300122: Cilantro|Cilantro Leaf|Dupli|27.0
+    2300124: Cilantro|Cilantro Leaf|Dupli|28.0
+    2300126: Cilantro|Cilantro Leaf|Dupli|29.0
+    2300128: 'Cooking Disk '
+    2300130: Cooking Disk 1
+    2300132: Cooking Disk 2
+    2300134: Cooking Disk 3
+    2300136: Cube
+    2300138: Cube.000
+    2300140: Cube.001
+    2300142: Cube.002
+    2300144: Cube.003
+    2300146: Cube.004
+    2300148: Cube.005
+    2300150: Cube.006
+    2300152: Cube.007
+    2300154: Cube.008
+    2300156: Cube.009
+    2300158: Floor
+    2300160: Gas Cooker
+    2300162: Gas Cooker Metal Rim
+    2300164: Knife
+    2300166: Long Windows Glass
+    2300168: Meat
+    2300170: Onion
+    2300172: Pepper
+    2300174: Plate
+    2300176: Regulator
+    2300178: Roof
+    2300180: Salt
+    2300182: Samll Meatball
+    2300184: Sink
+    2300186: Small Windows Glass
+    2300188: Sweet Pepper
+    2300190: Table
+    2300192: Table Feet
+    2300194: TragaLuz
+    2300196: Water Pipe
+    2300198: Window
+    2300200: Window Frame
+    3300000: Chopping Board
+    3300002: Cilantro
+    3300004: Cilantro.001
+    3300006: Cilantro.001|Cilantro Leaf|Dupli|10.0
+    3300008: Cilantro.001|Cilantro Leaf|Dupli|11.0
+    3300010: Cilantro.001|Cilantro Leaf|Dupli|12.0
+    3300012: Cilantro.001|Cilantro Leaf|Dupli|13.0
+    3300014: Cilantro.001|Cilantro Leaf|Dupli|14.0
+    3300016: Cilantro.001|Cilantro Leaf|Dupli|15.0
+    3300018: Cilantro.001|Cilantro Leaf|Dupli|16.0
+    3300020: Cilantro.001|Cilantro Leaf|Dupli|17.0
+    3300022: Cilantro.001|Cilantro Leaf|Dupli|18.0
+    3300024: Cilantro.001|Cilantro Leaf|Dupli|19.0
+    3300026: Cilantro.001|Cilantro Leaf|Dupli|20.0
+    3300028: Cilantro.001|Cilantro Leaf|Dupli|21.0
+    3300030: Cilantro.001|Cilantro Leaf|Dupli|22.0
+    3300032: Cilantro.001|Cilantro Leaf|Dupli|23.0
+    3300034: Cilantro.001|Cilantro Leaf|Dupli|24.0
+    3300036: Cilantro.001|Cilantro Leaf|Dupli|25.0
+    3300038: Cilantro.001|Cilantro Leaf|Dupli|26.0
+    3300040: Cilantro.001|Cilantro Leaf|Dupli|27.0
+    3300042: Cilantro.001|Cilantro Leaf|Dupli|28.0
+    3300044: Cilantro.001|Cilantro Leaf|Dupli|29.0
+    3300046: Cilantro.002
+    3300048: Cilantro.002|Cilantro Leaf|Dupli|10.0
+    3300050: Cilantro.002|Cilantro Leaf|Dupli|11.0
+    3300052: Cilantro.002|Cilantro Leaf|Dupli|12.0
+    3300054: Cilantro.002|Cilantro Leaf|Dupli|13.0
+    3300056: Cilantro.002|Cilantro Leaf|Dupli|14.0
+    3300058: Cilantro.002|Cilantro Leaf|Dupli|15.0
+    3300060: Cilantro.002|Cilantro Leaf|Dupli|16.0
+    3300062: Cilantro.002|Cilantro Leaf|Dupli|17.0
+    3300064: Cilantro.002|Cilantro Leaf|Dupli|18.0
+    3300066: Cilantro.002|Cilantro Leaf|Dupli|19.0
+    3300068: Cilantro.002|Cilantro Leaf|Dupli|20.0
+    3300070: Cilantro.002|Cilantro Leaf|Dupli|21.0
+    3300072: Cilantro.002|Cilantro Leaf|Dupli|22.0
+    3300074: Cilantro.002|Cilantro Leaf|Dupli|23.0
+    3300076: Cilantro.002|Cilantro Leaf|Dupli|24.0
+    3300078: Cilantro.002|Cilantro Leaf|Dupli|25.0
+    3300080: Cilantro.002|Cilantro Leaf|Dupli|26.0
+    3300082: Cilantro.002|Cilantro Leaf|Dupli|27.0
+    3300084: Cilantro.002|Cilantro Leaf|Dupli|28.0
+    3300086: Cilantro.002|Cilantro Leaf|Dupli|29.0
+    3300088: Cilantro|Cilantro Leaf|Dupli|10.0
+    3300090: Cilantro|Cilantro Leaf|Dupli|11.0
+    3300092: Cilantro|Cilantro Leaf|Dupli|12.0
+    3300094: Cilantro|Cilantro Leaf|Dupli|13.0
+    3300096: Cilantro|Cilantro Leaf|Dupli|14.0
+    3300098: Cilantro|Cilantro Leaf|Dupli|15.0
+    3300100: Cilantro|Cilantro Leaf|Dupli|16.0
+    3300102: Cilantro|Cilantro Leaf|Dupli|17.0
+    3300104: Cilantro|Cilantro Leaf|Dupli|18.0
+    3300106: Cilantro|Cilantro Leaf|Dupli|19.0
+    3300108: Cilantro|Cilantro Leaf|Dupli|20.0
+    3300110: Cilantro|Cilantro Leaf|Dupli|21.0
+    3300112: Cilantro|Cilantro Leaf|Dupli|22.0
+    3300114: Cilantro|Cilantro Leaf|Dupli|23.0
+    3300116: Cilantro|Cilantro Leaf|Dupli|24.0
+    3300118: Cilantro|Cilantro Leaf|Dupli|25.0
+    3300120: Cilantro|Cilantro Leaf|Dupli|26.0
+    3300122: Cilantro|Cilantro Leaf|Dupli|27.0
+    3300124: Cilantro|Cilantro Leaf|Dupli|28.0
+    3300126: Cilantro|Cilantro Leaf|Dupli|29.0
+    3300128: 'Cooking Disk '
+    3300130: Cooking Disk 1
+    3300132: Cooking Disk 2
+    3300134: Cooking Disk 3
+    3300136: Cube
+    3300138: Cube.000
+    3300140: Cube.001
+    3300142: Cube.002
+    3300144: Cube.003
+    3300146: Cube.004
+    3300148: Cube.005
+    3300150: Cube.006
+    3300152: Cube.007
+    3300154: Cube.008
+    3300156: Cube.009
+    3300158: Floor
+    3300160: Gas Cooker
+    3300162: Gas Cooker Metal Rim
+    3300164: Knife
+    3300166: Long Windows Glass
+    3300168: Meat
+    3300170: Onion
+    3300172: Pepper
+    3300174: Plate
+    3300176: Regulator
+    3300178: Roof
+    3300180: Salt
+    3300182: Samll Meatball
+    3300184: Sink
+    3300186: Small Windows Glass
+    3300188: Sweet Pepper
+    3300190: Table
+    3300192: Table Feet
+    3300194: TragaLuz
+    3300196: Water Pipe
+    3300198: Window
+    3300200: Window Frame
+    4300000: Cube.009
+    4300002: Cube.008
+    4300004: Cube.007
+    4300006: Cube
+    4300008: TragaLuz
+    4300010: Roof
+    4300012: Long Windows Glass
+    4300014: Small Windows Glass
+    4300016: Cube.006
+    4300018: Cube.005
+    4300020: Cube.004
+    4300022: Cube.002
+    4300024: Cube.003
+    4300026: Cube.001
+    4300028: Cube.000
+    4300030: Water Pipe
+    4300032: Table Feet
+    4300034: Table
+    4300036: Sweet Pepper
+    4300038: Sink
+    4300040: Samll Meatball
+    4300042: Salt
+    4300044: Gas Cooker
+    4300046: Regulator
+    4300048: 'Cooking Disk '
+    4300050: Cooking Disk 1
+    4300052: Cooking Disk 2
+    4300054: Cooking Disk 3
+    4300056: Gas Cooker Metal Rim
+    4300058: Plate
+    4300060: Pepper
+    4300062: Onion
+    4300064: Meat
+    4300066: Knife
+    4300068: Cilantro
+    4300070: Cilantro|Cilantro Leaf|Dupli|10.0
+    4300072: Cilantro.002
+    4300074: Cilantro.001
+    4300076: Chopping Board
+    4300078: Window
+    4300080: Window Frame
+    4300082: Floor
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
