@@ -71,7 +71,7 @@ public class ClientMenuManager : MonoBehaviour {
 
            actualClient = list.clientList[i];
            card.GetComponent<ClientCard>().GetInfo(list.clientList, i);
-           increment += 425f;
+           increment += 475f;
        }
     }
 
