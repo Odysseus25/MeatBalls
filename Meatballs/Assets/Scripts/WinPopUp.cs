@@ -54,9 +54,9 @@ public class WinPopUp : MonoBehaviour
             else if (concentration > 50f && concentration <= 75f)
             {
                 Color orange = new Color();
-                orange.r = 210f / 255f;
-                orange.g = 69f / 255f;
-                orange.b = 0f;
+                orange.r = 255f;
+                orange.g = 140f / 255f;
+                orange.b = 0;
                 orange.a = 1f;
                 ingridientText.GetComponentInChildren<Text>().color = orange;
             }

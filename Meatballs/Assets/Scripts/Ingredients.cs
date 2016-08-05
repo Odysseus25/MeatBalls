@@ -10,7 +10,9 @@ public class Ingredients : MonoBehaviour
     public bool isWanted;
     public int value = 1;
     public int type = 0;
+    public GameObject particleSys;
 
+    private ParticleSystem pickupEffect;
     PlayerController player;
 
     // Use this for initialization
@@ -18,13 +20,54 @@ public class Ingredients : MonoBehaviour
     {
         isWanted = false;
         player = FindObjectOfType<PlayerController>();
+        rotationSpeed = Random.Range(100f, 400f);
+        switch(PanelManager.actualClient.difficulty){
+            case 1:   
+                moveSpeed = Random.Range(1, 3);
+                break;
+            case 2:
+                moveSpeed = Random.Range(1, 5);
+                break;
+            case 3:
+                moveSpeed = Random.Range(1, 7);
+                break;
+            case 4:
+                moveSpeed = Random.Range(1, 10);
+                break;
+            case 5:
+                moveSpeed = Random.Range(1, 12);
+                break;
+        }
+
+        StartCoroutine(MoveIngredients());
+        StartCoroutine(RotateIngredients());
     }
 
     // Update is called once per frame
-    void Update()
+   /* void Update()
     {
         MoveIngredient();
         RotateIngredient();
+    }*/
+
+    public IEnumerator MoveIngredients()
+    {
+        while (true)
+        {
+            transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
+
+            yield return null;
+        }
+    }
+
+    public IEnumerator RotateIngredients()
+    {
+        while (true)
+        {
+            transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
+
+            yield return null;
+        }
     }
 
     void MoveIngredient()
@@ -42,9 +85,13 @@ public class Ingredients : MonoBehaviour
         if (player){
             if (type == 0) {
                 player.IncreaseSize();
+                GameController.DecreaseConcentration();
             }
             else {
                 GameController.IncreaseConcentration(type);
+            }
+            if (particleSys) {
+                Instantiate(particleSys, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }

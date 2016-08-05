@@ -108,18 +108,46 @@ public class ClientCard : MonoBehaviour {
     void ChangePortrait(Transform child) {
         if (actualClient.gender == 'm')
         {
-            //choose a random male portrait from the array and set it as the image
-            child.GetComponent<Image>().sprite = malePortrait[0];
+            string hisName = actualClient.clientName;
+            if (hisName.Equals("Verde")) {
+                child.GetComponent<Image>().sprite = malePortrait[0];
+            }
+            else if (hisName.Equals("Tulio")) {
+                child.GetComponent<Image>().sprite = malePortrait[1];
+            }
+            else if (hisName.Equals("Macho"))
+            {
+                child.GetComponent<Image>().sprite = malePortrait[2];
+            }
+            else if (hisName.Equals("Boga"))
+            {
+                child.GetComponent<Image>().sprite = malePortrait[3];
+            }
+
         }
         else {
-            //choose a random female protrait from the array and set it as the image
-            child.GetComponent<Image>().sprite = malePortrait[0];
-        }
+                string herName = actualClient.clientName;
+                if (herName.Equals("Mary"))
+                {
+                    child.GetComponent<Image>().sprite = femalePortrait[0];
+                }
+                else if (herName.Equals("Pao"))
+                {
+                    child.GetComponent<Image>().sprite = femalePortrait[1];
+                }
+                else if (herName.Equals("Nana"))
+                {
+                    child.GetComponent<Image>().sprite = femalePortrait[2];
+                }
+            }
         ChangeName(child);
     }    
 
     void ChangeName(Transform parent) {
         foreach (Transform name in parent) {
+            if (actualClient.clientName.Equals("Macho") || actualClient.clientName.Equals("Mary")) {
+                name.GetComponent<Text>().color = Color.black;
+            }
             name.GetComponent<Text>().text = actualClient.clientName;
         }
     }

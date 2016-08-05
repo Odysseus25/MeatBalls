@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour {
         SetInfo();
 	}
 
-    void SetInfo() {
+    public void SetInfo() {
         int childNumber = 0;
         foreach (Transform ingredients in transform) {
             if (ingredients.name == "Ingredients") {
@@ -35,9 +35,9 @@ public class PauseMenu : MonoBehaviour {
                             case 3:
                                 ingredientImage.GetComponentInChildren<Text>().text = "x75%";
                                 Color orange = new Color();
-                                orange.r = 210f / 255f;
-                                orange.g = 69f / 255f;
-                                orange.b = 0f;
+                                orange.r = 255f;
+                                orange.g = 140f / 255f;
+                                orange.b = 0;
                                 orange.a = 1f;
                                 ingredientImage.GetComponentInChildren<Text>().color = orange;
                                 break;

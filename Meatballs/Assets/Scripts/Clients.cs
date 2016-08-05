@@ -11,8 +11,8 @@ public class Clients{
     public float time;      //time in seconds 
     public char gender;
 
-    private string[] maleNames;
-    private string[] femaleNames;
+    private string[] maleNames = { "Verde", "Boga", "Macho", "Tulio" };
+    private string[] femaleNames = { "Pao", "Nana", "Mary"};
 
     /* Ingredients code
      * Salt = 1
@@ -55,7 +55,15 @@ public class Clients{
         }
     }
 
-    void SetName() { }
+    void SetName() {
+        if (this.gender == 'm')
+        {
+            this.clientName = maleNames[UnityEngine.Random.Range(0, 4)];
+        }
+        else {
+            this.clientName = femaleNames[UnityEngine.Random.Range(0, 3)];
+        }
+    }
 
     void SetGender()
     {
@@ -73,19 +81,19 @@ public class Clients{
     void SetTime() {
         switch(difficulty) {
             case 1:
-                time = 30f;
+                time = 90f;
                 break;
             case 2:
-                time = 45f;
+                time = 75f;
                 break;
             case 3:
                 time = 60f;
                 break;
             case 4:
-                time = 75f;
+                time = 45f;
                 break;
             case 5:
-                time = 90f;
+                time = 30f;
                 break;
         }
     }
@@ -130,7 +138,6 @@ public class Clients{
 
         switch (difficulty) {
             case 1:
-                clientName = "Jeff";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 while (ingredient2 == ingredient1) {
@@ -148,7 +155,6 @@ public class Clients{
                 Debug.Log("Ingrediente 2 " + preferences[0, 1] + " " + preferences[1, 1]);
                 break;
             case 2:
-                clientName = "John";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 while (ingredient2 == ingredient1)
@@ -167,7 +173,6 @@ public class Clients{
                 Debug.Log("Ingrediente 2 " + preferences[0, 1] + " " + preferences[1, 1]);
                 break;
             case 3:
-                clientName = "Jason";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 while (ingredient2 == ingredient1)
@@ -195,7 +200,6 @@ public class Clients{
                 Debug.Log("Ingrediente 3 " + preferences[0, 2] + " " + preferences[1, 2]);
                 break;
             case 4:
-                clientName = "Julio";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 while (ingredient2 == ingredient1)
@@ -224,7 +228,6 @@ public class Clients{
                 Debug.Log("Ingrediente 3 " + preferences[0, 2] + " " + preferences[1, 2]);
                 break;
             case 5:
-                clientName = "Jeffry";
                 ingredient1 = GetRandom();
                 ingredient2 = GetRandom();
                 while (ingredient2 == ingredient1)

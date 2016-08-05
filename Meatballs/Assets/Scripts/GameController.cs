@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     ClientController controller;
 
     public static float[] ingredientConcentration;
-    public static float[] concentrationMultipliers;
+    public static float[] concentrationMultiplier;
     public static int finalPayment = 0;
 
     // Use this for initialization
@@ -19,11 +19,7 @@ public class GameController : MonoBehaviour
     {
         controller = FindObjectOfType<ClientController>();
         ingredientConcentration = new float[6];
-        concentrationMultipliers = new float[6];
-        for (int i = 0; i < 6; i++) {
-            concentrationMultipliers[i] = 10f;
-        }
-
+        concentrationMultiplier = new float[] {0, 5f, 6f, 7f, 8f, 10f };
         anim = GameObject.FindGameObjectWithTag("Dialog Box").GetComponent<Animator>();
         pauseMenu = GameObject.FindGameObjectsWithTag("Pause Menu");
         winPopUp = GameObject.FindGameObjectsWithTag("Win PopUp");
@@ -66,6 +62,8 @@ public class GameController : MonoBehaviour
     public void StartGame() {
         anim.SetBool("ButtonPressed", true);
         Time.timeScale = 1;
+
+       // StartCoroutine(scrollingSpace.ScrollTexture());
     }
 
     public void HidePauseMenu() {
@@ -99,9 +97,20 @@ public class GameController : MonoBehaviour
 
     public static void IncreaseConcentration(int ingridientType)
     {
-        ingredientConcentration[ingridientType] += 1f * concentrationMultipliers[PanelManager.actualClient.difficulty];
+        ingredientConcentration[ingridientType] += concentrationMultiplier[PanelManager.actualClient.difficulty];
         if (ingredientConcentration[ingridientType] > 100f) {
             ingredientConcentration[ingridientType] = 100f;
+        }
+    }
+
+    public static void DecreaseConcentration()
+    {
+        for (int i = 0; i < 6; i++) {
+            ingredientConcentration[i] -= ingredientConcentration[i] * 0.25f;
+            if (ingredientConcentration[i] < 0f)
+            {
+                ingredientConcentration[i] = 0;
+            }
         }
     }
 
