@@ -19,7 +19,7 @@ public class DialogBoxController : MonoBehaviour
         SetBanner();
     }
 
-    private void SetBanner()
+    public void SetBanner()
     {
         int childNumber = 0;
         foreach (Transform ingredients in transform)
@@ -36,22 +36,22 @@ public class DialogBoxController : MonoBehaviour
                     }
                     else
                     {
+                        Debug.Log("childnumber: " + childNumber);
                         ingredientImage.GetComponent<Image>().sprite = ingredientSprites[PanelManager.actualClient.preferences[0, (childNumber)]];
                         Transform concentration = ingredientImage.GetChild(0);
                         Text concentrationText = concentration.GetComponent<Text>();
-                        concentrationText.color = Color.blue;
                         switch (PanelManager.actualClient.preferences[1, childNumber])
                         {
                             case 1:
-                                concentrationText.text = "25%";
+                                concentrationText.text = "x25";
                                 concentrationText.color = Color.green;
                                 break;
                             case 2:
-                                concentrationText.text = "50%";
+                                concentrationText.text = "x50";
                                 concentrationText.color = Color.yellow;
                                 break;
                             case 3:
-                                concentrationText.text = "x75%";
+                                concentrationText.text = "x75";
                                 Color orange = new Color();
                                 orange.r = 255f;
                                 orange.g = 140f / 255f;
@@ -60,8 +60,7 @@ public class DialogBoxController : MonoBehaviour
                                 concentrationText.color = orange;
                                 break;
                             case 4:
-                                concentrationText.text = "x100%";
-                                Debug.Log(concentrationText.color);
+                                concentrationText.text = "x100";
                                 concentrationText.color = Color.red;
                                 break;
                         }

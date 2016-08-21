@@ -30,7 +30,7 @@ public class WinPopUp : MonoBehaviour
                     }
                     else {
                         ingredientImage.GetComponent<Image>().sprite = ingredientSprites[PanelManager.actualClient.preferences[0, (childNumber)]];
-                        ingredientImage.GetComponentInChildren<Text>().text = "x" + GameController.ingredientConcentration[PanelManager.actualClient.preferences[0, (childNumber)]] + "%";
+                        ingredientImage.GetComponentInChildren<Text>().text = "x" + (int) GameController.ingredientConcentration[PanelManager.actualClient.preferences[0, (childNumber)]];
                         Debug.Log("child "+ childNumber);
                         SetTextColor(ingredientImage, GameController.ingredientConcentration[PanelManager.actualClient.preferences[0, (childNumber)]]);
                         childNumber++;

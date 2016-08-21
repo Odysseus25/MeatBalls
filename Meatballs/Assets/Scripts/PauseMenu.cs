@@ -25,15 +25,15 @@ public class PauseMenu : MonoBehaviour {
                         ingredientImage.GetComponent<Image>().sprite = ingredientSprites[PanelManager.actualClient.preferences[0, (childNumber)]];
                         switch (PanelManager.actualClient.preferences[1, childNumber]) {
                             case 1:
-                                ingredientImage.GetComponentInChildren<Text>().text = "x25%";
+                                ingredientImage.GetComponentInChildren<Text>().text = "x25";
                                 ingredientImage.GetComponentInChildren<Text>().color = Color.green;
                                 break;
                             case 2:
-                                ingredientImage.GetComponentInChildren<Text>().text = "x50%";
+                                ingredientImage.GetComponentInChildren<Text>().text = "x50";
                                 ingredientImage.GetComponentInChildren<Text>().color = Color.yellow;
                                 break;
                             case 3:
-                                ingredientImage.GetComponentInChildren<Text>().text = "x75%";
+                                ingredientImage.GetComponentInChildren<Text>().text = "x75";
                                 Color orange = new Color();
                                 orange.r = 255f;
                                 orange.g = 140f / 255f;
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour {
                                 ingredientImage.GetComponentInChildren<Text>().color = orange;
                                 break;
                             case 4:
-                                ingredientImage.GetComponentInChildren<Text>().text = "x100%";
+                                ingredientImage.GetComponentInChildren<Text>().text = "x100";
                                 ingredientImage.GetComponentInChildren<Text>().color = Color.red;
                                 break;
                         }

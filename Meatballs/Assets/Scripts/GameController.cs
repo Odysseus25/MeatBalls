@@ -21,10 +21,13 @@ public class GameController : MonoBehaviour
         ingredientConcentration = new float[6];
         concentrationMultiplier = new float[] {0, 5f, 6f, 7f, 8f, 10f };
         anim = GameObject.FindGameObjectWithTag("Dialog Box").GetComponent<Animator>();
+
         pauseMenu = GameObject.FindGameObjectsWithTag("Pause Menu");
         winPopUp = GameObject.FindGameObjectsWithTag("Win PopUp");
+
         HidePauseMenu();
         HideWinPopUp();
+
         Time.timeScale = 0;
     }
 
@@ -62,8 +65,6 @@ public class GameController : MonoBehaviour
     public void StartGame() {
         anim.SetBool("ButtonPressed", true);
         Time.timeScale = 1;
-
-       // StartCoroutine(scrollingSpace.ScrollTexture());
     }
 
     public void HidePauseMenu() {

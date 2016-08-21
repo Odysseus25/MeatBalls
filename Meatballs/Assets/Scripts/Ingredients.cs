@@ -43,13 +43,6 @@ public class Ingredients : MonoBehaviour
         StartCoroutine(RotateIngredients());
     }
 
-    // Update is called once per frame
-   /* void Update()
-    {
-        MoveIngredient();
-        RotateIngredient();
-    }*/
-
     public IEnumerator MoveIngredients()
     {
         while (true)
@@ -68,16 +61,6 @@ public class Ingredients : MonoBehaviour
 
             yield return null;
         }
-    }
-
-    void MoveIngredient()
-    {
-        transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
-    }
-
-    void RotateIngredient()
-    {
-        transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider col){
