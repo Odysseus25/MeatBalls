@@ -3,12 +3,13 @@ using System.Collections;
 
 public class Hairball : MonoBehaviour {
 
-    private float rotationSpeed = 150;
-    private float moveSpeed = 3;
+    private float rotationSpeed = 150f;
+    private float moveSpeed;
 
 	// Use this for initialization
 	void Start () {
         rotationSpeed = Random.Range(100f, 400f);
+        moveSpeed = GetComponent<NonIngredients>().moveSpeed;
         /*switch (PanelManager.actualClient.difficulty)
         {
             case 1:

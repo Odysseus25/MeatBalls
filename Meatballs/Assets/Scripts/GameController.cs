@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
 
     public static float[] ingredientConcentration;
     public static float[] concentrationMultiplier;
+    public static int healthiness;
     public static int finalPayment = 0;
 
     // Use this for initialization
@@ -27,6 +28,7 @@ public class GameController : MonoBehaviour
 
         HidePauseMenu();
         HideWinPopUp();
+        healthiness = 100;
 
         Time.timeScale = 0;
     }
@@ -186,4 +188,5 @@ public class GameController : MonoBehaviour
         Debug.Log("Payment " + payment);
         return payment;
     }
+
 }

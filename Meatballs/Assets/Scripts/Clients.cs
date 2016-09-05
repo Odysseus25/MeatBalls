@@ -32,7 +32,8 @@ public class Clients{
 
     public Clients()
     {
-        difficulty = UnityEngine.Random.Range(1, 6);
+        System.Random rnd = new System.Random();
+        difficulty = rnd.Next(1, 6);
     }
 
     void SetPayment() {

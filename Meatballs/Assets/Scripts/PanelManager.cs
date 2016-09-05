@@ -13,10 +13,12 @@ public class PanelManager : MonoBehaviour {
     private Transform text1;
     private Transform text2;
     private Transform text3;
+    private Transform text4;
 
     private RectTransform mask1;
     private RectTransform mask2;
     private RectTransform mask3;
+    private RectTransform mask4;
 
     private int ingredientType1;
     private int ingredientType2;
@@ -40,9 +42,11 @@ public class PanelManager : MonoBehaviour {
         SetText();
 
         GetMasks();
-        text1 = transform.GetChild(3);
-        text2 = transform.GetChild(4);
-        text3 = transform.GetChild(5);
+        text1 = transform.GetChild(4);
+        text2 = transform.GetChild(5);
+        text3 = transform.GetChild(6);
+        text4 = transform.GetChild(7);
+
 
         ingredientAnim1 = GameObject.FindGameObjectWithTag("Ingredient Panel").GetComponent<Animator>();
         ingredientAnim2 = GameObject.FindGameObjectWithTag("Ingredient Panel 1").GetComponent<Animator>();
@@ -56,16 +60,19 @@ public class PanelManager : MonoBehaviour {
         UpdateText();
         UpdateSprites();
         CheckRatios();
+        AdjustHealthMask();
 	}
 
     private void GetMasks() {
         RectTransform m1 = (RectTransform)transform.GetChild(0);
         RectTransform m2 = (RectTransform)transform.GetChild(1);
         RectTransform m3 = (RectTransform)transform.GetChild(2);
+        RectTransform m4 = (RectTransform)transform.GetChild(3);
 
         mask1 = (RectTransform)m1.GetChild(0);
         mask2 = (RectTransform)m2.GetChild(0);
         mask3 = (RectTransform)m3.GetChild(0);
+        mask4 = (RectTransform)m4.GetChild(0);
     }
 
     void SetSprites() {
@@ -156,12 +163,18 @@ public class PanelManager : MonoBehaviour {
                 }
             }
             else {
-                if (text.name == "Ingridient1" || text.name == "Ingridient2" || text.name == "Ingridient3") {
+                if (text.name == "Ingridient1" || text.name == "Ingridient2" || text.name == "Ingridient3" || text.name == "Ingridient4") {
                     if (text.name == "Ingridient3" && actualClient.difficulty <= 2)
                     {
                         text.GetComponent<Text>().enabled = false;
                     }
-                    text.GetComponent<Text>().text = "x0";
+                    if (text.name == "Ingridient4") {
+                        text.GetComponent<Text>().text = "x100";
+                    }
+                    else
+                    {
+                        text.GetComponent<Text>().text = "x0";
+                    }
                 }
             }
         }
@@ -177,7 +190,7 @@ public class PanelManager : MonoBehaviour {
             }
             float seconds = time % 60;
 
-            transform.GetChild(6).GetComponent<Text>().text = string.Format("{0:0}:{1:00}", minutes, seconds);
+            transform.GetChild(8).GetComponent<Text>().text = string.Format("{0:0}:{1:00}", minutes, seconds);
 
             yield return null;
         }
@@ -192,6 +205,8 @@ public class PanelManager : MonoBehaviour {
         SetTextColor(text1, ingredientType1);
         SetTextColor(text2, ingredientType2);
         SetTextColor(text3, ingredientType3);
+
+        text4.GetComponent<Text>().text = GameController.healthiness.ToString();
     }
 
     private void ChangeText(Transform text, int type) {
@@ -277,6 +292,10 @@ public class PanelManager : MonoBehaviour {
                 Debug.Log("Im ratio 3-3");
             }
         }
+    }
+
+    public void AdjustHealthMask() {
+        mask4.sizeDelta = new Vector2(159f, (GameController.healthiness * height) / 100);
     }
 }
 
